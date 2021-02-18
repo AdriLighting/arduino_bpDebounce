@@ -23,13 +23,13 @@ bpDebounce_management  _bpDebounce_management;
        int pin          = boardp in of the button
        boolean pullup   = if the buton is wiring as puulup or pulldown
        uint8_t mode     = INPUT or INPUT_PULLUP 
-       int & result     = return the postion of the instance array
+       int & result     = return the postion of the button instance 
         _bpDebounce_management.addBp(D1, false, INPUT, result);
 ```
 #### adding a callback function
 * void callback(int bp, mBPDc mod, _BP_callbackFunc func);
 ```c++
-    int bp                  = postion of the instance array
+    int bp                  = postion of the buton instance 
     mBPDc mod               = state of the button
     _BP_callbackFunc func   = function
     _bpDebounce_management.callback(result, mBPDc_click_1, _test_p_21);
@@ -91,28 +91,13 @@ void loop()
 Librairies
 <details>
 adri_timer                      = https://github.com/AdriLighting/adri_timer
-adri_logger                     = https://github.com/AdriLighting/adri_logger
-adri_tools_v2                   = https://github.com/AdriLighting/adri_tools_v2
 
 adri_bpDebounce                 = https://github.com/AdriLighting/adri_bpDebounce
-
-framework                       = https://github.com/esp8266/Arduino/tree/master/libraries
-ESP8266WiFi                     = 
-LittleFS(esp8266)               = 
 
 </details>
 Dependency Graph
 <details>
 |-- [adri_bpDebounce] 1.0.0
 |   |-- [adri_timer] 1.0.0
-|   |-- [adri_logger] 1.0.0
-|   |   |-- [adri_tools_v2] 1.0.0
-|   |   |   |-- [ESP8266WiFi] 1.0
-|   |   |   |-- [LittleFS(esp8266)] 0.1.0
-|   |   |-- [ESP8266WiFi] 1.0
-|   |   |-- [LittleFS(esp8266)] 0.1.0
-|   |-- [adri_tools_v2] 1.0.0
-|   |   |-- [ESP8266WiFi] 1.0
-|   |   |-- [LittleFS(esp8266)] 0.1.0
-|   |-- [LittleFS(esp8266)] 0.1.0</details>
+|-- [adri_timer] 1.0.0</details>
 </pre>
