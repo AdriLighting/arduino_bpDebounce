@@ -1,6 +1,6 @@
 #include "bp_debouce.h"
 
-// #define DEBUG
+#define DEBUG
 #ifdef DEBUG
     #include <LittleFS.h>
     #include <adri_logger.h>
@@ -99,7 +99,8 @@ void bpDebounceHandle::loop(){
                         _longPress  = true;
                     }
                     if (!_longPress) {
-                        if (!_raisedTimer->isActivate()) {_raisedTimer->set_duration_max(100);
+                        if (!_raisedTimer->isActivate()) {
+                            _raisedTimer->set_duration_max(100);
                             _raisedTimer->activate();}  
                     }
                 break;
