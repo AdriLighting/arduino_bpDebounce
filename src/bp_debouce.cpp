@@ -1,6 +1,6 @@
 #include "bp_debouce.h"
 
-#define DEBUG
+// #define DEBUG
 
 mBPDc mBPDcArray[] { 
     mBPDc_click_1,

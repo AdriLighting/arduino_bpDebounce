@@ -4,7 +4,7 @@
 #include <Arduino.h>
 #include <adri_timer.h>
 
-#define DEBUG
+// #define DEBUG
 #ifdef DEBUG
 
 static const char debug_shortPress 				[] PROGMEM = "shortPress";
