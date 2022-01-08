@@ -125,7 +125,7 @@ void bpDebounceHandle::loop(){
                 break;                  
                 case mBPD_detect_long:
                     #ifdef DEBUG
-                    Serial.printf_P(PSTR("%20s [%-3d][%-3d][%-3d]"), debug_longPressReleased, _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input); 
+                    Serial.printf_P(PSTR("-%20s [%-3d][%-3d][%-3d]\n"), debug_longPressReleased, _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input); 
                     #endif
                     if (_callback_lp_e != nullptr) _callback_lp_e->func();
                     reset_long();
@@ -136,27 +136,27 @@ void bpDebounceHandle::loop(){
     }
     if (_statu == mBPD_detect_long) {
         #ifdef DEBUG
-        Serial.printf_P(PSTR("%20s [%-3d][%-3d][%-3d]"), debug_longPressHandle, _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input);  
+        Serial.printf_P(PSTR("%-20s [%-3d][%-3d][%-3d]\n"), debug_longPressHandle, _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input);  
         #endif
         if (_callback_lp_l != nullptr) _callback_lp_l->func();
     }
     if (_shortPress == 1) {
         #ifdef DEBUG
-        Serial.printf_P(PSTR("%20s [%-3d][%-3d][%-3d][%d]"), debug_shortPress, _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input, _shortPress_count); 
+        Serial.printf_P(PSTR("%-20s [%-3d][%-3d][%-3d][%d]\n"), debug_shortPress, _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input, _shortPress_count); 
         #endif
         if (_callback_sp_1 != nullptr) _callback_sp_1->func();
         reset_short();
     }
     if (_shortPress == 2) {
         #ifdef DEBUG
-        Serial.printf_P(PSTR("%20s [%-3d][%-3d][%-3d][%d]"), debug_shortPress, _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input, _shortPress_count); 
+        Serial.printf_P(PSTR("%-20s [%-3d][%-3d][%-3d][%d]\n"), debug_shortPress, _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input, _shortPress_count); 
         #endif
         if (_callback_sp_2 != nullptr) _callback_sp_2->func();
         reset_short();
     }
     if (_shortPress == 3) {
         #ifdef DEBUG
-        Serial.printf_P(PSTR("%20s [%-3d][%-3d][%-3d][%d]"), debug_shortPress, _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input, _shortPress_count); 
+        Serial.printf_P(PSTR("%-20s [%-3d][%-3d][%-3d][%d]\n"), debug_shortPress, _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input, _shortPress_count); 
         #endif
         if (_callback_sp_3 != nullptr) _callback_sp_3->func();
         reset_short();

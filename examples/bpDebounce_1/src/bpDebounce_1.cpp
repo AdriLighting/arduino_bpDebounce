@@ -24,13 +24,13 @@ void setup()
 	_bpDebounce_management.callback(result, mBPDc_click_1, _test_p_1);
 	_bpChangeFunc = result;
 	
-	_bpDebounce_management.addBp(D2, true, INPUT_PULLUP, result);
-	_bpDebounce_management.callback(result, mBPDc_click_1, 			_test_p_21);
-	_bpDebounce_management.callback(result, mBPDc_click_2, 			_test_p_22);
-	_bpDebounce_management.callback(result, mBPDc_click_3, 			_test_p_23);
-	_bpDebounce_management.callback_toglle(result, mBPDc_click_3);
-	_bpDebounce_management.callback(result, mBPDc_longCick_stard, 	_test_p_2l);
-	_bpDebounce_management.callback(result, mBPDc_longCick_end, 	_test_p_2le);
+	// _bpDebounce_management.addBp(D2, true, INPUT_PULLUP, result);
+	// _bpDebounce_management.callback(result, mBPDc_click_1, 			_test_p_21);
+	// _bpDebounce_management.callback(result, mBPDc_click_2, 			_test_p_22);
+	// _bpDebounce_management.callback(result, mBPDc_click_3, 			_test_p_23);
+	// _bpDebounce_management.callback_toglle(result, mBPDc_click_3);
+	// _bpDebounce_management.callback(result, mBPDc_longCick_stard, 	_test_p_2l);
+	// _bpDebounce_management.callback(result, mBPDc_longCick_end, 	_test_p_2le);
 
 	_bpDebounce_management.print();
 
