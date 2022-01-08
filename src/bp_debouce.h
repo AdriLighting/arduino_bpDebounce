@@ -4,6 +4,23 @@
 #include <Arduino.h>
 #include <adri_timer.h>
 
+#define DEBUG
+#ifdef DEBUG
+
+static const char debug_shortPress 				[] PROGMEM = "shortPress";
+static const char debug_longPress 				[] PROGMEM = "longPress";
+static const char debug_longPressHandle 		[] PROGMEM = "longPress callback";
+static const char debug_longPressReleased 		[] PROGMEM = "longPress released";
+
+static const char p_bpd_pin 		[] PROGMEM = "pin";
+static const char p_bpd_pullup 		[] PROGMEM = "pullup";
+static const char p_bpd_input 		[] PROGMEM = "input";
+static const char p_bpd_statu 		[] PROGMEM = "statu";
+
+#define fsget(parm_a) String(FPSTR(parm_a))
+
+#endif
+
 enum mBPD
 {
 	mBPD_inactive,

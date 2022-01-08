@@ -1,11 +1,6 @@
 #include "bp_debouce.h"
 
 #define DEBUG
-#ifdef DEBUG
-    #include <LittleFS.h>
-    #include <adri_logger.h>
-    #include <adri_tools_v2.h>  
-#endif
 
 mBPDc mBPDcArray[] { 
     mBPDc_click_1,
@@ -130,7 +125,7 @@ void bpDebounceHandle::loop(){
                 break;                  
                 case mBPD_detect_long:
                     #ifdef DEBUG
-                    ADRI_LOG(-1, 2, 1, "[%-3d][%-3d][%-3d]callback long_press released", _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input); 
+                    Serial.printf_P(PSTR("%20s [%-3d][%-3d][%-3d]"), debug_longPressReleased, _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input); 
                     #endif
                     if (_callback_lp_e != nullptr) _callback_lp_e->func();
                     reset_long();
@@ -141,27 +136,27 @@ void bpDebounceHandle::loop(){
     }
     if (_statu == mBPD_detect_long) {
         #ifdef DEBUG
-        ADRI_LOG(-1, 2, 1, "[%-3d][%-3d][%-3d]callback long_press", _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input);  
+        Serial.printf_P(PSTR("%20s [%-3d][%-3d][%-3d]"), debug_longPressHandle, _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input);  
         #endif
         if (_callback_lp_l != nullptr) _callback_lp_l->func();
     }
     if (_shortPress == 1) {
         #ifdef DEBUG
-        ADRI_LOGV(-1, 2, 1, _shortPress_count, "[%-3d][%-3d][%-3d]", _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input); 
+        Serial.printf_P(PSTR("%20s [%-3d][%-3d][%-3d][%d]"), debug_shortPress, _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input, _shortPress_count); 
         #endif
         if (_callback_sp_1 != nullptr) _callback_sp_1->func();
         reset_short();
     }
     if (_shortPress == 2) {
         #ifdef DEBUG
-        ADRI_LOGV(-1, 2, 1, _shortPress_count, "[%-3d][%-3d][%-3d]", _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input); 
+        Serial.printf_P(PSTR("%20s [%-3d][%-3d][%-3d][%d]"), debug_shortPress, _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input, _shortPress_count); 
         #endif
         if (_callback_sp_2 != nullptr) _callback_sp_2->func();
         reset_short();
     }
     if (_shortPress == 3) {
         #ifdef DEBUG
-        ADRI_LOGV(-1, 2, 1, _shortPress_count, "[%-3d][%-3d][%-3d]", _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input); 
+        Serial.printf_P(PSTR("%20s [%-3d][%-3d][%-3d][%d]"), debug_shortPress, _bpDebounce->_pin, _bpDebounce->_pullup, _bpDebounce->_input, _shortPress_count); 
         #endif
         if (_callback_sp_3 != nullptr) _callback_sp_3->func();
         reset_short();
@@ -247,9 +242,6 @@ void bpDebounceHandle::callback_isActivate(mBPDc mod, boolean & result){
 // region ################################################ BPDEBOUNCE_MANAGEMENT
 bpDebounce_management::bpDebounce_management(){
     #ifdef DEBUG
-        LittleFS.begin();
-        new adri_toolsV2();
-        new adriToolsLogger();      
     #endif  
 
 }
@@ -267,18 +259,23 @@ void bpDebounce_management::loop(){
     }
 }
 #ifdef DEBUG
-fs(p_bpd_pin,       "pin");
-fs(p_bpd_pullup,    "pullup");
-fs(p_bpd_input,     "input");
-fs(p_bpd_statu,     "statu");
+void padding(String & result, const String & name, const String & value , int len = 25, const char * tdb1 = "\t", const char * sep = " : ",  const char * tdb2 = "",  const char * last = "");
+void padding(String & result, const String & name, const String & value , int len, const char * tdb1, const char * sep,  const char * tdb2,  const char * last){
+    String s=name;
+    int size = s.length();
+    while (size<len){
+        s+=" ";
+        size = s.length();
+    }
+    result = tdb1+s+sep+tdb2+value+last;
+}
 #endif
 void bpDebounce_management::print(int bp){
 #ifdef DEBUG    
     
-    adri_toolsV2* _tools = adri_toolsv2Ptr_get();
-    if (_tools->tempStrArray != nullptr) delete[] _tools->tempStrArray;
-    _tools->tempStrArraySize    = 10;
-    _tools->tempStrArray        = new String[_tools->tempStrArraySize];
+    uint8_t tempStrArraySize    = 10;
+    String * tempStrArray       = new String[tempStrArraySize];
+    String paddingStr;
 
     int         pin;
     boolean     statu;
@@ -298,22 +295,30 @@ void bpDebounce_management::print(int bp){
         }       
     } 
 
-    _tools->tempStrArray[0] = "BP : " + String(bp) + "\n";
-    _tools->tempStrArray[1] = _tools->info_parm(fsget(p_bpd_pin),       String(pin),    20);     
-    _tools->tempStrArray[2] = _tools->info_parm(fsget(p_bpd_pullup),    String(pullup), 20);     
-    _tools->tempStrArray[3] = _tools->info_parm(fsget(p_bpd_input),     String(input),  20);     
-    _tools->tempStrArray[4] = _tools->info_parm(fsget(p_bpd_statu),     String(statu),  20);     
+    tempStrArray[0] = "BP : " + String(bp) + "\n";
+    padding(paddingStr, fsget(p_bpd_pin),       String(pin),    20);  
+    tempStrArray[1] =  paddingStr;  
+    padding(paddingStr, fsget(p_bpd_pullup),    String(pullup), 20);  
+    tempStrArray[2] =  paddingStr;  
+    padding(paddingStr, fsget(p_bpd_input),     String(input),  20);  
+    tempStrArray[3] =  paddingStr;  
+    padding(paddingStr, fsget(p_bpd_statu),     String(statu),  20);  
+    tempStrArray[4] =  paddingStr;  
+
     int cnt = 5; 
     for (int i = mBPDc_click_1; i < mBPDc_none; ++i) {  
         if (callbackRegister[i]) {
-            _tools->tempStrArray[cnt] = _tools->info_parm( mBPDc_toString(mBPDcArray[i]) , String(callbackActivate[i]), 20);  
+            padding(paddingStr, mBPDc_toString(mBPDcArray[i]) , String(callbackActivate[i]), 20); 
+            tempStrArray[cnt] =  paddingStr;
         }  else {
-            _tools->tempStrArray[cnt] = _tools->info_parm( mBPDc_toString(mBPDcArray[i]) , "unregistered", 20);  
+            padding(paddingStr, mBPDc_toString(mBPDcArray[i]) , "unregistered", 20);
+            tempStrArray[cnt] = paddingStr;
         }
         cnt++;  
     } 
-
-    _tools->tempStr_print();  
+    for (int i = 0; i < tempStrArraySize; ++i){
+        Serial.println(tempStrArray[i]);
+    }
 #endif
 }
 void bpDebounce_management::print(){
