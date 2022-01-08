@@ -1,7 +1,7 @@
 
 
 {
-  "name": "bpDebounce",
+  "name": "bp_debouce",
   "keywords": "Switches, Buttons, Debounced",
   "description": "Arduino library to debounce button switches, detect presses, releases, and long presses.",
   "homepage": "https://github.com/AdriLighting/adri_bpDebounce",
