@@ -73,7 +73,7 @@ bpDebounceHandle * bpDebounceHandleArray[10];
 
 bpDebounceHandle::bpDebounceHandle(bpDebounce * ptr){
     _bpDebounce = ptr;
-    _raisedTimer = new adri_timer(100, "", false);
+    _raisedTimer = new adri_timer(100, false);
 }
 
 void bpDebounceHandle::loop(){
