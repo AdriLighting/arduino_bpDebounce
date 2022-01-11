@@ -95,7 +95,7 @@ void bpDebounceHandle::loop(){
                     }
                     if (!_longPress) {
                         if (!_raisedTimer->isActivate()) {
-                            _raisedTimer->set_duration_max(100);
+                            _raisedTimer->set_durationMax(100);
                             _raisedTimer->activate();}  
                     }
                 break;
@@ -169,7 +169,7 @@ void bpDebounceHandle::reset_short(){
     _longPress          = false;
     _statu              = mBPD_inactive;
     _lastChange         = millis();
-    if (!_raisedTimer->isActivate()) {_raisedTimer->set_duration_max(250);_raisedTimer->activate();}    
+    if (!_raisedTimer->isActivate()) {_raisedTimer->set_durationMax(250);_raisedTimer->activate();}    
 }
 void bpDebounceHandle::reset_long(){
     _shortPress         = 0;
