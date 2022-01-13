@@ -28,7 +28,7 @@
  * @see       https://github.com/AdriLighting
  * 
  * @author    Adrien Grellard   
- * @date      jeu. 13 dec. 2021 11:32:26
+ * @date      2021 11:32:26
  *
  */
 
@@ -60,8 +60,22 @@ mBPDc mBPDcArray[] {
 #endif
 
 // region ################################################ BPDEBOUNCE
+
+
 bpDebounce * bpDebounceArray[10];
 
+
+/**
+ * @fn         bpDebounce::bpDebounce(int pin, boolean pullup, uint8_t mode) 
+ * @brief      constructor instancier par la class bpDebounceHandle
+ * 
+ * @see     https://github.com/AdriLighting/
+ * @author  Adrien Grellard 
+ * 
+ * @param[in]  pin     The pin
+ * @param[in]  pullup  The pullup
+ * @param[in]  mode    The mode
+ */
 bpDebounce::bpDebounce(int pin, boolean pullup, uint8_t mode){
     _pin    = pin;
     _pullup = pullup;
@@ -69,21 +83,70 @@ bpDebounce::bpDebounce(int pin, boolean pullup, uint8_t mode){
     pinMode(pin, mode);
 }
 
+/**
+ * @fn      bpDebounce::statuGet()
+ * @brief   GETTER: etat de tension du bouton
+ * 
+ * @see     https://github.com/AdriLighting/
+ * @author  Adrien Grellard 
+ * 
+ * @return  true if > 0v
+ */
 boolean bpDebounce::statuGet() {
     if (_pullup)    return (digitalRead(_pin)==LOW);
     else            return (digitalRead(_pin)!=LOW);
 }
-
 void bpDebounce::statuGet(boolean & result) {
     if (_pullup)    result = (digitalRead(_pin)==LOW);
     else            result = (digitalRead(_pin)!=LOW);
-}   
+}  
+
+/**
+ * @fn      bpDebounce::pinGet(int & result)
+ * @brief   GETTER: pin utiliser sur la board
+ * 
+ * @see     https://github.com/AdriLighting/
+ * @author  Adrien Grellard 
+ * 
+ * @param   result  = valeur par reference
+ */
 void bpDebounce::pinGet(int & result)           {result = _pin;}
+
+/**
+ * @fn      bpDebounce::pullupGet(boolean & result)
+ * @brief   GETTER: type de montage Résistance pull down ou Résistance pull up
+ * 
+ * @see     https://github.com/AdriLighting/
+ * @author  Adrien Grellard 
+ * 
+ * @param   result  = valeur par reference
+ */
 void bpDebounce::pullupGet(boolean & result)    {result = _pullup;}
+
+/**
+ * @fn      bpDebounce::inputGet(uint8_t & result)
+ * @brief   GETTER: Utilisation de la Résistance interne/externe
+ * 
+ * @see     https://github.com/AdriLighting/
+ * @author  Adrien Grellard 
+ * 
+ * @param   result  = valeur par reference
+ */
 void bpDebounce::inputGet(uint8_t & result)     {result = _input;}
 // endregion >>>> BPDEBOUNCE
 
+
 // region ################################################ BPDEBOUNCE_CALLBACK
+
+/**
+ * @fn         bpDebounce_callback::bpDebounce_callback(_BP_callbackFunc * func)
+ * @brief      constructor instancier par la class bpDebounceHandle
+ * 
+ * @see     https://github.com/AdriLighting/
+ * @author  Adrien Grellard 
+ * 
+ * @param      func  The function
+ */
 bpDebounce_callback::bpDebounce_callback(_BP_callbackFunc * func){
     _func = *func;
 }
@@ -107,35 +170,35 @@ bpDebounceHandle * bpDebounceHandleArray[10];
 
 bpDebounceHandle::bpDebounceHandle(bpDebounce * ptr){
     _bpDebounce = ptr;
-    _raisedTimer = new adri_timer(100, false);
+    _pressedTimer = new adri_timer(100, false);
 }
 
 void bpDebounceHandle::loop(){
 
-    if (_raisedTimer->isActivate()) {_raisedTimer->loop_stop();return;} 
+    if (_pressedTimer->isActivate()) {_pressedTimer->loop_stop();return;} 
 
     unsigned long sNow = millis();
     if (_bpDebounce->statuGet()) {
             switch (_statu) {
                 case mBPD_inactive:
                     _lastChange         = sNow;
-                    _statu              = mBPD_raised;
+                    _statu              = mBPD_pressed;
                     _shortPress_count   = 0;
                 break;
-                case mBPD_raised:
+                case mBPD_pressed:
                     if ( (sNow-_lastChange) > _longPress_delay ) {
                         _statu      = mBPD_detect_long;
                         _longPress  = true;
                     }
                     if (!_longPress) {
-                        if (!_raisedTimer->isActivate()) {
-                            _raisedTimer->set_durationMax(100);
-                            _raisedTimer->activate();}  
+                        if (!_pressedTimer->isActivate()) {
+                            _pressedTimer->set_durationMax(100);
+                            _pressedTimer->activate();}  
                     }
                 break;
                 case mBPD_detect_short:
                     _lastChange = sNow;
-                    _statu      = mBPD_raised;
+                    _statu      = mBPD_pressed;
                 break;  
                 case mBPD_detect_long:
                     
@@ -146,7 +209,7 @@ void bpDebounceHandle::loop(){
     }
     if (!_bpDebounce->statuGet()) {
             switch (_statu) {
-                case mBPD_raised:
+                case mBPD_pressed:
                     _shortPress_count++;
                     _lastChange = sNow;
                     _statu      = mBPD_detect_short;
@@ -203,7 +266,7 @@ void bpDebounceHandle::reset_short(){
     _longPress          = false;
     _statu              = mBPD_inactive;
     _lastChange         = millis();
-    if (!_raisedTimer->isActivate()) {_raisedTimer->set_durationMax(250);_raisedTimer->activate();}    
+    if (!_pressedTimer->isActivate()) {_pressedTimer->set_durationMax(250);_pressedTimer->activate();}    
 }
 void bpDebounceHandle::reset_long(){
     _shortPress         = 0;

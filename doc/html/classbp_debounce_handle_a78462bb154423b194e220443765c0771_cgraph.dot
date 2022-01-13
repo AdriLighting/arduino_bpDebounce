@@ -1,0 +1,16 @@
+digraph "bpDebounceHandle::loop"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="bpDebounceHandle::loop",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="bpDebounce_callback\l::func",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce__callback.html#a681a65e3531e0a867c569c16f6ee8d85",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="bpDebounceHandle::reset_long",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce_handle.html#a73b353e1880358cce84c529d492b0124",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="bpDebounceHandle::reset\l_short",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce_handle.html#a58361cb062f99e6f3d7395ac3fc41384",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="bpDebounce::statuGet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce.html#a8aa32c25895e35693ba8ee9e81b56ba1",tooltip="GETTER: etat de tension du bouton."];
+}

@@ -28,7 +28,7 @@
  * @see       https://github.com/AdriLighting
  * 
  * @author    Adrien Grellard   
- * @date      jeu. 13 dec. 2021 11:32:26
+ * @date      2021 11:32:26
  *
  */
 
@@ -55,51 +55,92 @@ static const char p_bpd_statu     [] PROGMEM = "statu";
 
 #endif
 
+/** 
+ * @enum    mBPD
+ * @brief   mod pour indiquer l"état binaire du bouton
+ *          
+ * @see     https://github.com/AdriLighting
+ * 
+ * @author  Adrien Grellard   
+ * @date      2021 11:32:26
+ */
 enum mBPD
 {
-  mBPD_inactive,
-  mBPD_raised,
-  mBPD_detect_long,
-  mBPD_detect_short,
-  mBPD_long_end,
+  mBPD_inactive,      /**<  */
+  mBPD_pressed,       /**< pressé */
+  mBPD_detect_long,   /**< pressé et maintenu */
+  mBPD_detect_short,  /**< pressé rapidement */
+  mBPD_long_end,      /**< fin de la pression maintenu  */
 };
+
+/** 
+ * @enum    mBPDc
+ * @brief   mod pour indiquer le type de callback utiliser 
+ * @see     https://github.com/AdriLighting
+ * 
+ * @author  Adrien Grellard   
+ * @date      2021 11:32:26
+ */
 enum mBPDc
 {
-  mBPDc_click_1,
-  mBPDc_click_2,
-  mBPDc_click_3,
-  mBPDc_longCick_stard,
-  mBPDc_longCick_end,
-  mBPDc_none,
+  mBPDc_click_1,          /**< pressé rapidement 1fois */
+  mBPDc_click_2,          /**< pressé rapidement 2fois */
+  mBPDc_click_3,          /**< pressé rapidement 3fois */
+  mBPDc_longCick_stard,   /**< tant que la pression est maintenu */
+  mBPDc_longCick_end,     /**< fin de la pression maintenu */
+  mBPDc_none,             /**< default */
 
 };
 // region ################################################ BPDEBOUNCE
+
+/**
+ * @class   bpDebounce
+ * 
+ * @brief   class pour l'initialisation du bouton'
+ * @see     https://github.com/AdriLighting/
+ * 
+ * @author  Adrien Grellard 
+ * @date      2021 11:32:26
+ */
 class bpDebounce {
-private:
-
-
 public:
-  int     _pin = -1;
-  boolean   _pullup = true;
-  uint8_t   _input;
+  int       _pin = -1;        /**< \brief pin utiliser */
+  boolean   _pullup = true;   /**< \brief Montage Résistance pull down ou Résistance pull up */
+  /*
+      INPUT         pull up externe.
+      INPUT_PULLUP  pull up interne.
+  */
+  uint8_t   _input;           /**< \brief Utilisation de la Résistance interne/externe */
 
   bpDebounce(int pin, boolean pullup, uint8_t mode);
 
-    boolean statuGet();
-    void  statuGet(boolean & result); 
-    void  pinGet(int & result);
-    void  pullupGet(boolean & result);
-    void  inputGet(uint8_t & result);
+  boolean statuGet();
+  void  statuGet(boolean & result); 
+  void  pinGet(int & result);
+  void  pullupGet(boolean & result);
+  void  inputGet(uint8_t & result);
 };  
 // endregion >>>> BPDEBOUNCE
 
+
 // region ################################################ BPDEBOUNCE_CALLBACK
-typedef void (*_BP_callbackFunc)();  
+
+typedef void (*_BP_callbackFunc)(); 
+
+/**
+ * @class   bpDebounce_callback
+ * 
+ * @brief   class pour la gestion des fonction callback atrribuer a l'état du bouton
+ * @see     https://github.com/AdriLighting/
+ * 
+ * @author  Adrien Grellard 
+ * @date      2021 11:32:26
+ */
 class bpDebounce_callback {
 private:
-  mBPDc         _mod    = mBPDc_none;
-  _BP_callbackFunc  _func     = NULL;
-  boolean       _activate   = true; 
+  mBPDc             _mod        = mBPDc_none;   /**< \brief type de pression */
+  _BP_callbackFunc  _func       = NULL;         /**< \brief callback */
+  boolean           _activate   = true;         /**< \brief activation/desactivation du callback */
 public:
 
   bpDebounce_callback(_BP_callbackFunc * func);
@@ -110,29 +151,40 @@ public:
 };  
 // endregion >>>> BPDEBOUNCE_CALLBACK
 
+
 // region ################################################ BPDEBOUNCEHANDLE
+
+/**
+ * @class   bpDebounceHandle
+ * 
+ * @brief   class pour la gestion de l'etat du bouton
+ * @see     https://github.com/AdriLighting/
+ * 
+ * @author  Adrien Grellard 
+ * @date      2021 11:32:26
+ */
 class bpDebounceHandle {
 private:
-  bpDebounce_callback * _callback_sp_1 = nullptr;
-  bpDebounce_callback * _callback_sp_2 = nullptr;
-  bpDebounce_callback * _callback_sp_3 = nullptr;
-  bpDebounce_callback * _callback_lp_l = nullptr;
-  bpDebounce_callback * _callback_lp_e = nullptr;
+  bpDebounce_callback * _callback_sp_1 = nullptr; /**< \brief ptr du callback attribuer pour un simple click */
+  bpDebounce_callback * _callback_sp_2 = nullptr; /**< \brief ptr du callback attribuer pour un double click */
+  bpDebounce_callback * _callback_sp_3 = nullptr; /**< \brief ptr du callback attribuer pour un triple click */
+  bpDebounce_callback * _callback_lp_l = nullptr; /**< \brief ptr du callback attribuer pendant une longue pression */
+  bpDebounce_callback * _callback_lp_e = nullptr; /**< \brief ptr du callback attribuer apres une longue pressionk */
 
 
-  uint32_t  _longPress_delay  = 3000;
-  boolean   _longPress        = false;
+  uint32_t  _longPress_delay  = 3000;   /**< \brief durée minmum pour que la detection longue soit valider */
+  boolean   _longPress        = false;  /**< \brief valide la pression longue */
 
-  uint8_t   _shortPress_delay   = 255;
-  uint8_t   _shortPress_count   = 0;
-  uint8_t   _shortPress         = 0;
+  uint8_t   _shortPress_delay   = 255;  /**< \brief durée pendant laquelle l'incremenation du nombre de pression est faite */
+  uint8_t   _shortPress_count   = 0;    /**< \brief incrementation entre chaque pression  */
+  uint8_t   _shortPress         = 0;    /**< \brief resulta une foit la durée finit */
 
-  boolean   _bPread;
-  mBPD      _statu = mBPD_inactive;
-  uint32_t  _lastChange;
+  // boolean   _bPread;                    /**< \brief  */
+  mBPD      _statu = mBPD_inactive;     /**< \brief mod de l'état du bouton */
+  uint32_t  _lastChange;                /**< \brief timer diff */
 
-  boolean     _reset = false;
-  adri_timer  * _raisedTimer;
+  // boolean     _reset = false;           /**< \brief   */
+  adri_timer  * _pressedTimer;          /**< \brief  */
 
 public:
   bpDebounce * _bpDebounce;
