@@ -179,15 +179,15 @@ private:
   uint8_t   _shortPress_count   = 0;    /**< \brief incrementation entre chaque pression  */
   uint8_t   _shortPress         = 0;    /**< \brief resulta une foit la durée finit */
 
-  // boolean   _bPread;                    /**< \brief  */
+  // boolean   _bPread;                 /**< \brief  */
   mBPD      _statu = mBPD_inactive;     /**< \brief mod de l'état du bouton */
   uint32_t  _lastChange;                /**< \brief timer diff */
 
-  // boolean     _reset = false;           /**< \brief   */
-  adri_timer  * _pressedTimer;          /**< \brief  */
+  // boolean     _reset = false;        /**< \brief   */
+  adri_timer * _pressedTimer;          /**< \brief fait office de while en debut de loop*/
 
 public:
-  bpDebounce * _bpDebounce;
+  bpDebounce * _bpDebounce;             /**< \brief  instance d'initialisation */
 
 
   bpDebounceHandle(bpDebounce * ptr) ;
@@ -202,7 +202,18 @@ public:
 };  
 // endregion >>>> BPDEBOUNCEHANDLE
 
+
 // region ################################################ BPDEBOUNCE_MANAGEMENT
+
+/**
+ * @class   bpDebounce_management
+ * 
+ * @brief   class pour la gestion general des toutes les classes
+ * @see     https://github.com/AdriLighting/
+ * 
+ * @author  Adrien Grellard 
+ * @date      2021 11:32:26
+ */
 class bpDebounce_management {
 private:
   int _pos = 0;
