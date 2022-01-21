@@ -4,11 +4,11 @@ digraph "bpDebounce_management::callback"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1 [label="bpDebounce_management\l::callback",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="bpDebounce_management\l::callback",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="creation des callback"];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="bpDebounceHandle::callback",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce_handle.html#abb59d7b16b15e6686da31fa3419f2a01",tooltip=" "];
+  Node2 [label="bpDebounceHandle::callback",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce_handle.html#abb59d7b16b15e6686da31fa3419f2a01",tooltip="attribution des fonctions callback"];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="bpDebounce_callback\l::func_change",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce__callback.html#a6661bda0e965ba7d63ef1c853f1bf463",tooltip=" "];
+  Node3 [label="bpDebounce_callback\l::func_change",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce__callback.html#a6661bda0e965ba7d63ef1c853f1bf463",tooltip="changement du ptr de la fonction callback"];
   Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="bpDebounce_callback\l::func",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce__callback.html#a681a65e3531e0a867c569c16f6ee8d85",tooltip=" "];
+  Node4 [label="bpDebounce_callback\l::func",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce__callback.html#a681a65e3531e0a867c569c16f6ee8d85",tooltip="appel de la fonction callback"];
 }

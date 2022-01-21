@@ -22,13 +22,13 @@
     SOFTWARE.
 */
 /**
- * @file      bp_debouce.cpp
+ * @file    bp_debouce.cpp
  *
- * @brief     main file
- * @see       https://github.com/AdriLighting
+ * @brief   main file
+ * @see     https://github.com/AdriLighting
  * 
- * @author    Adrien Grellard   
- * @date      2021 11:32:26
+ * @author  Adrien Grellard   
+ * @date    2021
  *
  */
 

@@ -4,15 +4,15 @@ digraph "bpDebounce_management::loop"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1 [label="bpDebounce_management\l::loop",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="bpDebounce_management\l::loop",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="backgroud"];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="bpDebounceHandle::loop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce_handle.html#a78462bb154423b194e220443765c0771",tooltip=" "];
+  Node2 [label="bpDebounceHandle::loop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce_handle.html#a78462bb154423b194e220443765c0771",tooltip="loop"];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="bpDebounce_callback\l::func",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce__callback.html#a681a65e3531e0a867c569c16f6ee8d85",tooltip=" "];
+  Node3 [label="bpDebounce_callback\l::func",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce__callback.html#a681a65e3531e0a867c569c16f6ee8d85",tooltip="appel de la fonction callback"];
   Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="bpDebounceHandle::reset_long",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce_handle.html#a73b353e1880358cce84c529d492b0124",tooltip=" "];
   Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="bpDebounceHandle::reset\l_short",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce_handle.html#a58361cb062f99e6f3d7395ac3fc41384",tooltip=" "];
+  Node5 [label="bpDebounceHandle::reset\l_short",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce_handle.html#a58361cb062f99e6f3d7395ac3fc41384",tooltip="reset_short"];
   Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node6 [label="bpDebounce::statuGet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce.html#a8aa32c25895e35693ba8ee9e81b56ba1",tooltip="GETTER: etat de tension du bouton."];
 }

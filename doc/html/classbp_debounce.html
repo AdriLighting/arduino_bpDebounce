@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('classbp_debounce.html',''); initResiza
 </div><!--header-->
 <div class="contents">
 
-<p>class pour la gestion mechanique  
+<p>class pour l'initialisation du bouton'  
  <a href="classbp_debounce.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="bp__debouce_8h_source.html">bp_debouce.h</a>&gt;</code></p>
@@ -105,7 +105,7 @@ Collaboration diagram for bpDebounce:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e93429b9e8444bb0d0b3846b436a29b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbp_debounce.html#a8e93429b9e8444bb0d0b3846b436a29b">bpDebounce</a> (int pin, boolean pullup, uint8_t mode)</td></tr>
-<tr class="memdesc:a8e93429b9e8444bb0d0b3846b436a29b"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor instancier par la class <a class="el" href="classbp_debounce_handle.html">bpDebounceHandle</a>  <a href="classbp_debounce.html#a8e93429b9e8444bb0d0b3846b436a29b">More...</a><br /></td></tr>
+<tr class="memdesc:a8e93429b9e8444bb0d0b3846b436a29b"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor instancier par la class <a class="el" href="classbp_debounce_handle.html" title="class pour la gestion de l&#39;etat du bouton">bpDebounceHandle</a>  <a href="classbp_debounce.html#a8e93429b9e8444bb0d0b3846b436a29b">More...</a><br /></td></tr>
 <tr class="separator:a8e93429b9e8444bb0d0b3846b436a29b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8aa32c25895e35693ba8ee9e81b56ba1"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbp_debounce.html#a8aa32c25895e35693ba8ee9e81b56ba1">statuGet</a> ()</td></tr>
 <tr class="memdesc:a8aa32c25895e35693ba8ee9e81b56ba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">GETTER: etat de tension du bouton.  <a href="classbp_debounce.html#a8aa32c25895e35693ba8ee9e81b56ba1">More...</a><br /></td></tr>
@@ -135,10 +135,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:abb2438ad664f2b73c6535abb1c37572e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>class pour la gestion mechanique </p>
+<div class="textblock"><p>class pour l'initialisation du bouton' </p>
 <dl class="section see"><dt>See also</dt><dd><a href="https://github.com/AdriLighting/">https://github.com/AdriLighting/</a></dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Adrien Grellard </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2021 11:32:26 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2021 </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="bp__debouce_8h_source.html#l00105">105</a> of file <a class="el" href="bp__debouce_8h_source.html">bp_debouce.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -174,7 +174,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>constructor instancier par la class <a class="el" href="classbp_debounce_handle.html">bpDebounceHandle</a> </p>
+<p>constructor instancier par la class <a class="el" href="classbp_debounce_handle.html" title="class pour la gestion de l&#39;etat du bouton">bpDebounceHandle</a> </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://github.com/AdriLighting/">https://github.com/AdriLighting/</a> </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Adrien Grellard</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pin</td><td>The pin </td></tr>
@@ -184,13 +186,13 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00076">76</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                                           {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classbp_debounce.html#a133d72e577b718eb18847322111c93af">_pin</a>    = pin;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="classbp_debounce.html#a6829fedfc3f7fdb2498c33540a50aad6">_pullup</a> = pullup;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="classbp_debounce.html#abb2438ad664f2b73c6535abb1c37572e">_input</a>  = mode;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    pinMode(pin, mode);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00079">79</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                                                           {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classbp_debounce.html#a133d72e577b718eb18847322111c93af">_pin</a>    = pin;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classbp_debounce.html#a6829fedfc3f7fdb2498c33540a50aad6">_pullup</a> = pullup;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classbp_debounce.html#abb2438ad664f2b73c6535abb1c37572e">_input</a>  = mode;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    pinMode(pin, mode);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="bp__debouce_8h_source.html#l00113">_input</a>, <a class="el" href="bp__debouce_8h_source.html#l00107">_pin</a>, and <a class="el" href="bp__debouce_8h_source.html#l00108">_pullup</a>.</p>
 
@@ -223,12 +225,12 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00130">130</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{result = <a class="code" href="classbp_debounce.html#abb2438ad664f2b73c6535abb1c37572e">_input</a>;}</div>
+<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00135">135</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{result = <a class="code" href="classbp_debounce.html#abb2438ad664f2b73c6535abb1c37572e">_input</a>;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="bp__debouce_8h_source.html#l00113">_input</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00357">bpDebounce_management::print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00558">bpDebounce_management::print()</a>.</p>
 
 </div>
 </div>
@@ -258,12 +260,12 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00110">110</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{result = <a class="code" href="classbp_debounce.html#a133d72e577b718eb18847322111c93af">_pin</a>;}</div>
+<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00113">113</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{result = <a class="code" href="classbp_debounce.html#a133d72e577b718eb18847322111c93af">_pin</a>;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="bp__debouce_8h_source.html#l00107">_pin</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00357">bpDebounce_management::print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00558">bpDebounce_management::print()</a>.</p>
 
 </div>
 </div>
@@ -293,12 +295,12 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00120">120</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{result = <a class="code" href="classbp_debounce.html#a6829fedfc3f7fdb2498c33540a50aad6">_pullup</a>;}</div>
+<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00124">124</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{result = <a class="code" href="classbp_debounce.html#a6829fedfc3f7fdb2498c33540a50aad6">_pullup</a>;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="bp__debouce_8h_source.html#l00108">_pullup</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00357">bpDebounce_management::print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00558">bpDebounce_management::print()</a>.</p>
 
 </div>
 </div>
@@ -322,15 +324,15 @@ Public Attributes</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Adrien Grellard</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true if &gt; 0v </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00092">92</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                             {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classbp_debounce.html#a6829fedfc3f7fdb2498c33540a50aad6">_pullup</a>)    <span class="keywordflow">return</span> (digitalRead(<a class="code" href="classbp_debounce.html#a133d72e577b718eb18847322111c93af">_pin</a>)==LOW);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">else</span>            <span class="keywordflow">return</span> (digitalRead(<a class="code" href="classbp_debounce.html#a133d72e577b718eb18847322111c93af">_pin</a>)!=LOW);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00095">95</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                             {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classbp_debounce.html#a6829fedfc3f7fdb2498c33540a50aad6">_pullup</a>)    <span class="keywordflow">return</span> (digitalRead(<a class="code" href="classbp_debounce.html#a133d72e577b718eb18847322111c93af">_pin</a>)==LOW);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">else</span>            <span class="keywordflow">return</span> (digitalRead(<a class="code" href="classbp_debounce.html#a133d72e577b718eb18847322111c93af">_pin</a>)!=LOW);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="bp__debouce_8h_source.html#l00107">_pin</a>, and <a class="el" href="bp__debouce_8h_source.html#l00108">_pullup</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00163">bpDebounceHandle::loop()</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00357">bpDebounce_management::print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00232">bpDebounceHandle::loop()</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00558">bpDebounce_management::print()</a>.</p>
 
 </div>
 </div>
@@ -350,11 +352,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00096">96</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                          {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classbp_debounce.html#a6829fedfc3f7fdb2498c33540a50aad6">_pullup</a>)    result = (digitalRead(<a class="code" href="classbp_debounce.html#a133d72e577b718eb18847322111c93af">_pin</a>)==LOW);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">else</span>            result = (digitalRead(<a class="code" href="classbp_debounce.html#a133d72e577b718eb18847322111c93af">_pin</a>)!=LOW);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}  </div>
+<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00099">99</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                                          {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classbp_debounce.html#a6829fedfc3f7fdb2498c33540a50aad6">_pullup</a>)    result = (digitalRead(<a class="code" href="classbp_debounce.html#a133d72e577b718eb18847322111c93af">_pin</a>)==LOW);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">else</span>            result = (digitalRead(<a class="code" href="classbp_debounce.html#a133d72e577b718eb18847322111c93af">_pin</a>)!=LOW);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}  </div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="bp__debouce_8h_source.html#l00107">_pin</a>, and <a class="el" href="bp__debouce_8h_source.html#l00108">_pullup</a>.</p>
 
@@ -377,7 +379,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="bp__debouce_8h_source.html#l00113">113</a> of file <a class="el" href="bp__debouce_8h_source.html">bp_debouce.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00076">bpDebounce()</a>, <a class="el" href="bp__debouce_8cpp_source.html#l00130">inputGet()</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00163">bpDebounceHandle::loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00079">bpDebounce()</a>, <a class="el" href="bp__debouce_8cpp_source.html#l00135">inputGet()</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00232">bpDebounceHandle::loop()</a>.</p>
 
 </div>
 </div>
@@ -397,7 +399,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="bp__debouce_8h_source.html#l00107">107</a> of file <a class="el" href="bp__debouce_8h_source.html">bp_debouce.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00076">bpDebounce()</a>, <a class="el" href="bp__debouce_8cpp_source.html#l00163">bpDebounceHandle::loop()</a>, <a class="el" href="bp__debouce_8cpp_source.html#l00110">pinGet()</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00092">statuGet()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00079">bpDebounce()</a>, <a class="el" href="bp__debouce_8cpp_source.html#l00232">bpDebounceHandle::loop()</a>, <a class="el" href="bp__debouce_8cpp_source.html#l00113">pinGet()</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00095">statuGet()</a>.</p>
 
 </div>
 </div>
@@ -417,7 +419,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="bp__debouce_8h_source.html#l00108">108</a> of file <a class="el" href="bp__debouce_8h_source.html">bp_debouce.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00076">bpDebounce()</a>, <a class="el" href="bp__debouce_8cpp_source.html#l00163">bpDebounceHandle::loop()</a>, <a class="el" href="bp__debouce_8cpp_source.html#l00120">pullupGet()</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00092">statuGet()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00079">bpDebounce()</a>, <a class="el" href="bp__debouce_8cpp_source.html#l00232">bpDebounceHandle::loop()</a>, <a class="el" href="bp__debouce_8cpp_source.html#l00124">pullupGet()</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00095">statuGet()</a>.</p>
 
 </div>
 </div>
@@ -434,7 +436,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classbp_debounce.html">bpDebounce</a></li>
-    <li class="footer">Generated on Thu Jan 13 2022 18:38:18 for bp_debouce by
+    <li class="footer">Generated on Sat Jan 15 2022 13:44:45 for bp_debouce by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

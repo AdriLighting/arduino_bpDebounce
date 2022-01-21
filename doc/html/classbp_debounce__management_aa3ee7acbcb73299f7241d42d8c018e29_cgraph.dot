@@ -6,11 +6,11 @@ digraph "bpDebounce_management::print"
   rankdir="LR";
   Node1 [label="bpDebounce_management\l::print",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="bpDebounceHandle::callback\l_isActivate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce_handle.html#adc196b49445cc9091096be5e923712d6",tooltip=" "];
+  Node2 [label="bpDebounceHandle::callback\l_isActivate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce_handle.html#adc196b49445cc9091096be5e923712d6",tooltip="GETTER: callaback avtiver ou pas."];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="bpDebounce_callback\l::activate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce__callback.html#aed0fc8a0c3f915c02ad4a0a506e0a424",tooltip=" "];
+  Node3 [label="bpDebounce_callback\l::activate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce__callback.html#aed0fc8a0c3f915c02ad4a0a506e0a424",tooltip="GETTER: etat de kactivation de l'appele du callback."];
   Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="bpDebounceHandle::callback\l_isRegister",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce_handle.html#a5cdba8ee947202edf11edd9e1cb98cf2",tooltip=" "];
+  Node4 [label="bpDebounceHandle::callback\l_isRegister",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce_handle.html#a5cdba8ee947202edf11edd9e1cb98cf2",tooltip="GETTER: ptr referencer ou pas."];
   Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node5 [label="bpDebounce::inputGet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce.html#a1efb5d31b28cd3486b85de7144a9c93e",tooltip="GETTER: Utilisation de la Résistance interne/externe."];
   Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

@@ -28,7 +28,7 @@
  * @see       https://github.com/AdriLighting
  * 
  * @author    Adrien Grellard   
- * @date      2021 11:32:26
+ * @date      2021
  *
  */
 
@@ -62,15 +62,15 @@ static const char p_bpd_statu     [] PROGMEM = "statu";
  * @see     https://github.com/AdriLighting
  * 
  * @author  Adrien Grellard   
- * @date      2021 11:32:26
+ * @date    2021
  */
 enum mBPD
 {
-  mBPD_inactive,      /**<  */
-  mBPD_pressed,       /**< pressé */
-  mBPD_detect_long,   /**< pressé et maintenu */
-  mBPD_detect_short,  /**< pressé rapidement */
-  mBPD_long_end,      /**< fin de la pression maintenu  */
+  mBPD_inactive,      /**< \brief  */
+  mBPD_pressed,       /**< \brief pressé */
+  mBPD_detect_long,   /**< \brief pressé et maintenu */
+  mBPD_detect_short,  /**< \brief pressé rapidement */
+  mBPD_long_end,      /**< \brief fin de la pression maintenu  */
 };
 
 /** 
@@ -79,16 +79,16 @@ enum mBPD
  * @see     https://github.com/AdriLighting
  * 
  * @author  Adrien Grellard   
- * @date      2021 11:32:26
+ * @date    2021
  */
 enum mBPDc
 {
-  mBPDc_click_1,          /**< pressé rapidement 1fois */
-  mBPDc_click_2,          /**< pressé rapidement 2fois */
-  mBPDc_click_3,          /**< pressé rapidement 3fois */
-  mBPDc_longCick_stard,   /**< tant que la pression est maintenu */
-  mBPDc_longCick_end,     /**< fin de la pression maintenu */
-  mBPDc_none,             /**< default */
+  mBPDc_click_1,          /**< \brief pressé rapidement 1fois */
+  mBPDc_click_2,          /**< \brief pressé rapidement 2fois */
+  mBPDc_click_3,          /**< \brief pressé rapidement 3fois */
+  mBPDc_longCick_stard,   /**< \brief tant que la pression est maintenu */
+  mBPDc_longCick_end,     /**< \brief fin de la pression maintenu */
+  mBPDc_none,             /**< \brief default */
 
 };
 // region ################################################ BPDEBOUNCE
@@ -100,7 +100,7 @@ enum mBPDc
  * @see     https://github.com/AdriLighting/
  * 
  * @author  Adrien Grellard 
- * @date      2021 11:32:26
+ * @date    2021
  */
 class bpDebounce {
 public:
@@ -134,7 +134,7 @@ typedef void (*_BP_callbackFunc)();
  * @see     https://github.com/AdriLighting/
  * 
  * @author  Adrien Grellard 
- * @date      2021 11:32:26
+ * @date    2021
  */
 class bpDebounce_callback {
 private:
@@ -161,7 +161,7 @@ public:
  * @see     https://github.com/AdriLighting/
  * 
  * @author  Adrien Grellard 
- * @date      2021 11:32:26
+ * @date    2021
  */
 class bpDebounceHandle {
 private:
@@ -212,7 +212,7 @@ public:
  * @see     https://github.com/AdriLighting/
  * 
  * @author  Adrien Grellard 
- * @date      2021 11:32:26
+ * @date    2021
  */
 class bpDebounce_management {
 private:

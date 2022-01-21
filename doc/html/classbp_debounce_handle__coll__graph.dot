@@ -3,9 +3,9 @@ digraph "bpDebounceHandle"
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="bpDebounceHandle",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="bpDebounceHandle",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="class pour la gestion de l'etat du bouton"];
   Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _bpDebounce" ,fontname="Helvetica"];
-  Node2 [label="bpDebounce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce.html",tooltip="class pour la gestion mechanique"];
+  Node2 [label="bpDebounce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce.html",tooltip="class pour l'initialisation du bouton'"];
   Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _pin" ,fontname="Helvetica"];
   Node3 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _input" ,fontname="Helvetica"];
@@ -19,9 +19,9 @@ digraph "bpDebounceHandle"
   Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _shortPress\n_shortPress_count\n_shortPress_delay" ,fontname="Helvetica"];
   Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _statu" ,fontname="Helvetica"];
   Node8 [label="mBPD",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
-  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _longPress\n_bPread\n_reset" ,fontname="Helvetica"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _longPress" ,fontname="Helvetica"];
   Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _callback_sp_1\n_callback_sp_2\n_callback_sp_3\n_callback_lp_e\n_callback_lp_l" ,fontname="Helvetica"];
-  Node9 [label="bpDebounce_callback",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce__callback.html",tooltip="class pour la gestion des fonction atrribuer a l'état du bouton"];
+  Node9 [label="bpDebounce_callback",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbp_debounce__callback.html",tooltip="class pour la gestion des fonction callback atrribuer a l'état du bouton"];
   Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _mod" ,fontname="Helvetica"];
   Node10 [label="mBPDc",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node11 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _func" ,fontname="Helvetica"];

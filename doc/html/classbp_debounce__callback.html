@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('classbp_debounce__callback.html',''); 
 </div><!--header-->
 <div class="contents">
 
-<p>class pour la gestion des fonction atrribuer a l'état du bouton  
+<p>class pour la gestion des fonction callback atrribuer a l'état du bouton  
  <a href="classbp_debounce__callback.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="bp__debouce_8h_source.html">bp_debouce.h</a>&gt;</code></p>
@@ -105,14 +105,19 @@ Collaboration diagram for bpDebounce_callback:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0335bbabd91461070758499178f19feb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbp_debounce__callback.html#a0335bbabd91461070758499178f19feb">bpDebounce_callback</a> (<a class="el" href="bp__debouce_8h.html#ada1b986c0af5b4785dd9612bb66338f0">_BP_callbackFunc</a> *<a class="el" href="classbp_debounce__callback.html#a681a65e3531e0a867c569c16f6ee8d85">func</a>)</td></tr>
+<tr class="memdesc:a0335bbabd91461070758499178f19feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor instancier par la class <a class="el" href="classbp_debounce_handle.html" title="class pour la gestion de l&#39;etat du bouton">bpDebounceHandle</a>  <a href="classbp_debounce__callback.html#a0335bbabd91461070758499178f19feb">More...</a><br /></td></tr>
 <tr class="separator:a0335bbabd91461070758499178f19feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed0fc8a0c3f915c02ad4a0a506e0a424"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbp_debounce__callback.html#aed0fc8a0c3f915c02ad4a0a506e0a424">activate</a> (boolean &amp;ret)</td></tr>
+<tr class="memdesc:aed0fc8a0c3f915c02ad4a0a506e0a424"><td class="mdescLeft">&#160;</td><td class="mdescRight">GETTER: etat de kactivation de l'appele du callback.  <a href="classbp_debounce__callback.html#aed0fc8a0c3f915c02ad4a0a506e0a424">More...</a><br /></td></tr>
 <tr class="separator:aed0fc8a0c3f915c02ad4a0a506e0a424"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20f0add7a26d15db8385794a40df4578"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbp_debounce__callback.html#a20f0add7a26d15db8385794a40df4578">toglle</a> ()</td></tr>
+<tr class="memdesc:a20f0add7a26d15db8385794a40df4578"><td class="mdescLeft">&#160;</td><td class="mdescRight">activation/desactivation de l'appel de la fonction callback  <a href="classbp_debounce__callback.html#a20f0add7a26d15db8385794a40df4578">More...</a><br /></td></tr>
 <tr class="separator:a20f0add7a26d15db8385794a40df4578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a681a65e3531e0a867c569c16f6ee8d85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbp_debounce__callback.html#a681a65e3531e0a867c569c16f6ee8d85">func</a> ()</td></tr>
+<tr class="memdesc:a681a65e3531e0a867c569c16f6ee8d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">appel de la fonction callback  <a href="classbp_debounce__callback.html#a681a65e3531e0a867c569c16f6ee8d85">More...</a><br /></td></tr>
 <tr class="separator:a681a65e3531e0a867c569c16f6ee8d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6661bda0e965ba7d63ef1c853f1bf463"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbp_debounce__callback.html#a6661bda0e965ba7d63ef1c853f1bf463">func_change</a> (<a class="el" href="bp__debouce_8h.html#ada1b986c0af5b4785dd9612bb66338f0">_BP_callbackFunc</a> *<a class="el" href="classbp_debounce__callback.html#a681a65e3531e0a867c569c16f6ee8d85">func</a>)</td></tr>
+<tr class="memdesc:a6661bda0e965ba7d63ef1c853f1bf463"><td class="mdescLeft">&#160;</td><td class="mdescRight">changement du ptr de la fonction callback  <a href="classbp_debounce__callback.html#a6661bda0e965ba7d63ef1c853f1bf463">More...</a><br /></td></tr>
 <tr class="separator:a6661bda0e965ba7d63ef1c853f1bf463"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -128,10 +133,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:af07a54052c9a907c33b85177a31f2bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>class pour la gestion des fonction atrribuer a l'état du bouton </p>
+<div class="textblock"><p>class pour la gestion des fonction callback atrribuer a l'état du bouton </p>
 <dl class="section see"><dt>See also</dt><dd><a href="https://github.com/AdriLighting/">https://github.com/AdriLighting/</a></dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Adrien Grellard </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2021 11:32:26 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2021 </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="bp__debouce_8h_source.html#l00139">139</a> of file <a class="el" href="bp__debouce_8h_source.html">bp_debouce.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -151,12 +156,22 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00137">137</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                                                               {</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="classbp_debounce__callback.html#a5045c87d9593a3dcd84bbcc6d8b3b552">_func</a> = *<a class="code" href="classbp_debounce__callback.html#a681a65e3531e0a867c569c16f6ee8d85">func</a>;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+<p>constructor instancier par la class <a class="el" href="classbp_debounce_handle.html" title="class pour la gestion de l&#39;etat du bouton">bpDebounceHandle</a> </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://github.com/AdriLighting/">https://github.com/AdriLighting/</a> </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Adrien Grellard</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>ver la fonction callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00150">150</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                                                               {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="classbp_debounce__callback.html#a5045c87d9593a3dcd84bbcc6d8b3b552">_func</a> = *<a class="code" href="classbp_debounce__callback.html#a681a65e3531e0a867c569c16f6ee8d85">func</a>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="bp__debouce_8h_source.html#l00142">_func</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00143">func()</a>.</p>
+<p class="reference">References <a class="el" href="bp__debouce_8h_source.html#l00142">_func</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00174">func()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -182,14 +197,24 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00150">150</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                                               {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    ret = <a class="code" href="classbp_debounce__callback.html#af07a54052c9a907c33b85177a31f2bff">_activate</a>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}   </div>
+<p>GETTER: etat de kactivation de l'appele du callback. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://github.com/AdriLighting/">https://github.com/AdriLighting/</a> </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Adrien Grellard</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ret</td><td>ret = valeur par reference </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00200">200</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                                               {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    ret = <a class="code" href="classbp_debounce__callback.html#af07a54052c9a907c33b85177a31f2bff">_activate</a>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;}   </div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="bp__debouce_8h_source.html#l00143">_activate</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00313">bpDebounceHandle::callback_isActivate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00461">bpDebounceHandle::callback_isActivate()</a>.</p>
 
 </div>
 </div>
@@ -208,15 +233,19 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00143">143</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                              {</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="classbp_debounce__callback.html#af07a54052c9a907c33b85177a31f2bff">_activate</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="classbp_debounce__callback.html#a5045c87d9593a3dcd84bbcc6d8b3b552">_func</a>();</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
+<p>appel de la fonction callback </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://github.com/AdriLighting/">https://github.com/AdriLighting/</a> </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Adrien Grellard </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00174">174</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                              {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="classbp_debounce__callback.html#af07a54052c9a907c33b85177a31f2bff">_activate</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="classbp_debounce__callback.html#a5045c87d9593a3dcd84bbcc6d8b3b552">_func</a>();</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="bp__debouce_8h_source.html#l00143">_activate</a>, and <a class="el" href="bp__debouce_8h_source.html#l00142">_func</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00137">bpDebounce_callback()</a>, <a class="el" href="bp__debouce_8cpp_source.html#l00140">func_change()</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00163">bpDebounceHandle::loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00150">bpDebounce_callback()</a>, <a class="el" href="bp__debouce_8cpp_source.html#l00163">func_change()</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00232">bpDebounceHandle::loop()</a>.</p>
 
 </div>
 </div>
@@ -236,14 +265,25 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00140">140</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                                                            {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="classbp_debounce__callback.html#a5045c87d9593a3dcd84bbcc6d8b3b552">_func</a> = *<a class="code" href="classbp_debounce__callback.html#a681a65e3531e0a867c569c16f6ee8d85">func</a>;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="bp__debouce_8h_source.html#l00142">_func</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00143">func()</a>.</p>
+<p>changement du ptr de la fonction callback </p>
+<p><br  />
+ </p><dl class="section see"><dt>See also</dt><dd><a href="https://github.com/AdriLighting/">https://github.com/AdriLighting/</a> </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Adrien Grellard</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>ver la fonction callback </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00265">bpDebounceHandle::callback()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00163">163</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                                                            {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="classbp_debounce__callback.html#a5045c87d9593a3dcd84bbcc6d8b3b552">_func</a> = *<a class="code" href="classbp_debounce__callback.html#a681a65e3531e0a867c569c16f6ee8d85">func</a>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="bp__debouce_8h_source.html#l00142">_func</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00174">func()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00382">bpDebounceHandle::callback()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -267,14 +307,18 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00147">147</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                                {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="classbp_debounce__callback.html#af07a54052c9a907c33b85177a31f2bff">_activate</a> = !<a class="code" href="classbp_debounce__callback.html#af07a54052c9a907c33b85177a31f2bff">_activate</a>;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}   </div>
+<p>activation/desactivation de l'appel de la fonction callback </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://github.com/AdriLighting/">https://github.com/AdriLighting/</a> </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Adrien Grellard </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="bp__debouce_8cpp_source.html#l00186">186</a> of file <a class="el" href="bp__debouce_8cpp_source.html">bp_debouce.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                                {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="classbp_debounce__callback.html#af07a54052c9a907c33b85177a31f2bff">_activate</a> = !<a class="code" href="classbp_debounce__callback.html#af07a54052c9a907c33b85177a31f2bff">_activate</a>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}   </div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="bp__debouce_8h_source.html#l00143">_activate</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00291">bpDebounceHandle::callback_toglle()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00418">bpDebounceHandle::callback_toglle()</a>.</p>
 
 </div>
 </div>
@@ -303,7 +347,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bp__debouce_8h_source.html#l00143">143</a> of file <a class="el" href="bp__debouce_8h_source.html">bp_debouce.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00150">activate()</a>, <a class="el" href="bp__debouce_8cpp_source.html#l00143">func()</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00147">toglle()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00200">activate()</a>, <a class="el" href="bp__debouce_8cpp_source.html#l00174">func()</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00186">toglle()</a>.</p>
 
 </div>
 </div>
@@ -331,7 +375,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bp__debouce_8h_source.html#l00142">142</a> of file <a class="el" href="bp__debouce_8h_source.html">bp_debouce.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00137">bpDebounce_callback()</a>, <a class="el" href="bp__debouce_8cpp_source.html#l00143">func()</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00140">func_change()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bp__debouce_8cpp_source.html#l00150">bpDebounce_callback()</a>, <a class="el" href="bp__debouce_8cpp_source.html#l00174">func()</a>, and <a class="el" href="bp__debouce_8cpp_source.html#l00163">func_change()</a>.</p>
 
 </div>
 </div>
@@ -368,13 +412,13 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassbp_debounce__callback_html_af07a54052c9a907c33b85177a31f2bff"><div class="ttname"><a href="classbp_debounce__callback.html#af07a54052c9a907c33b85177a31f2bff">bpDebounce_callback::_activate</a></div><div class="ttdeci">boolean _activate</div><div class="ttdoc">activation/desactivation du callback</div><div class="ttdef"><b>Definition:</b> <a href="bp__debouce_8h_source.html#l00143">bp_debouce.h:143</a></div></div>
-<div class="ttc" id="aclassbp_debounce__callback_html_a681a65e3531e0a867c569c16f6ee8d85"><div class="ttname"><a href="classbp_debounce__callback.html#a681a65e3531e0a867c569c16f6ee8d85">bpDebounce_callback::func</a></div><div class="ttdeci">void func()</div><div class="ttdef"><b>Definition:</b> <a href="bp__debouce_8cpp_source.html#l00143">bp_debouce.cpp:143</a></div></div>
+<div class="ttc" id="aclassbp_debounce__callback_html_a681a65e3531e0a867c569c16f6ee8d85"><div class="ttname"><a href="classbp_debounce__callback.html#a681a65e3531e0a867c569c16f6ee8d85">bpDebounce_callback::func</a></div><div class="ttdeci">void func()</div><div class="ttdoc">appel de la fonction callback</div><div class="ttdef"><b>Definition:</b> <a href="bp__debouce_8cpp_source.html#l00174">bp_debouce.cpp:174</a></div></div>
 <div class="ttc" id="aclassbp_debounce__callback_html_a5045c87d9593a3dcd84bbcc6d8b3b552"><div class="ttname"><a href="classbp_debounce__callback.html#a5045c87d9593a3dcd84bbcc6d8b3b552">bpDebounce_callback::_func</a></div><div class="ttdeci">_BP_callbackFunc _func</div><div class="ttdoc">callback</div><div class="ttdef"><b>Definition:</b> <a href="bp__debouce_8h_source.html#l00142">bp_debouce.h:142</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classbp_debounce__callback.html">bpDebounce_callback</a></li>
-    <li class="footer">Generated on Thu Jan 13 2022 18:38:18 for bp_debouce by
+    <li class="footer">Generated on Sat Jan 15 2022 13:44:45 for bp_debouce by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
