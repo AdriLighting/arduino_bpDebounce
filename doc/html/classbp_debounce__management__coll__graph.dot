@@ -5,5 +5,5 @@ digraph "bpDebounce_management"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="bpDebounce_management",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="class pour la gestion general des toutes les classes"];
   Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _pos" ,fontname="Helvetica"];
-  Node2 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 [label="int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
 }

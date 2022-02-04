@@ -29,4 +29,9 @@
   "frameworks": "arduino",
   "platforms": "atmelavr, espressif8266",
   "headers": "bp_debouce.h",
+  "export": {
+      "exclude": [
+          "doc"
+      ]
+  },  
 }

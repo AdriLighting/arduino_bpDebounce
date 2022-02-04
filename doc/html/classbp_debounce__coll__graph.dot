@@ -5,9 +5,9 @@ digraph "bpDebounce"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="bpDebounce",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="class pour l'initialisation du bouton'"];
   Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _pin" ,fontname="Helvetica"];
-  Node2 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
-  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _input" ,fontname="Helvetica"];
-  Node3 [label="uint8_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
-  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _pullup" ,fontname="Helvetica"];
-  Node4 [label="boolean",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 [label="int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _pullup" ,fontname="Helvetica"];
+  Node3 [label="boolean",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _input" ,fontname="Helvetica"];
+  Node4 [label="uint8_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
 }
