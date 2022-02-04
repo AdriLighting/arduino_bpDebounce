@@ -1,6 +1,7 @@
 {
   "name": "bp_debouce",
   "version": "0.0.1",
+  "license": "MIT",
   "keywords": "Switches, Buttons, Debounced",
   "description": "Arduino library to debounce button switches, detect presses, releases, and long presses.",
   "homepage": "https://github.com/AdriLighting/",
@@ -13,7 +14,8 @@
   [
     {
       "name": "Grellard Adrien",
-      "email": "grellard.adrien@gmail.com"
+      "email": "grellard.adrien@gmail.com",
+      "maintainer": true
     }
   ],
   "dependencies": [
@@ -25,5 +27,6 @@
     
   ],
   "frameworks": "arduino",
-  "platforms": "espressif8266"
+  "platforms": "atmelavr, espressif8266",
+  "headers": "bp_debouce.h",
 }
