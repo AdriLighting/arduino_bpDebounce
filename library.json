@@ -7,7 +7,7 @@
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/AdriLighting/adri_bpDebounce.git"
+    "url": "https://github.com/AdriLighting/bpDebounce.git"
   },
   "authors":
   [
@@ -19,7 +19,7 @@
   "dependencies": [
     {
         "owner": "Grellard Adrien",
-        "name": "adri_timer",
+        "name": "millisTimer",
         "version": "^0.0.0"
     }
     
