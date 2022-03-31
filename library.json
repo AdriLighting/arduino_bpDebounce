@@ -1,5 +1,5 @@
 {
-  "name": "bp_debouce",
+  "name": "arduino_bpDebounce",
   "version": "0.0.1",
   "license": "MIT",
   "keywords": "Switches, Buttons, Debounced",
@@ -8,7 +8,7 @@
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/AdriLighting/bpDebounce.git"
+    "url": "https://github.com/AdriLighting/arduino_bpDebounce.git"
   },
   "authors": [
     {
@@ -20,8 +20,8 @@
   "dependencies": [
     {
         "owner": "Grellard Adrien",
-        "name": "AdriLighting_millisTimer",
-        "version": "https://github.com/AdriLighting/millisTimer.git"
+        "name": "arduino_ALmillisTimer",
+        "version": "https://github.com/AdriLighting/arduino_ALmillisTimer.git"
     }
     
   ],
