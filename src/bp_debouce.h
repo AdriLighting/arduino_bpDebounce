@@ -175,7 +175,7 @@ private:
   uint32_t  _longPress_delay  = 3000;   /**< \brief durée minmum pour que la detection longue soit valider */
   boolean   _longPress        = false;  /**< \brief valide la pression longue */
 
-  uint8_t   _shortPress_delay   = 255;  /**< \brief durée pendant laquelle l'incremenation du nombre de pression est faite */
+  uint8_t   _shortPress_delay   = 50;  /**< \brief durée pendant laquelle l'incremenation du nombre de pression est faite */
   uint8_t   _shortPress_count   = 0;    /**< \brief incrementation entre chaque pression  */
   uint8_t   _shortPress         = 0;    /**< \brief resulta une foit la durée finit */
 
